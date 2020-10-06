@@ -1,25 +1,21 @@
-%{ #include<studio.h>
-
-int n_lines=0;
-
+%{
+	#include<stdio.h>
+	int linecount=0;
 %}
 
 %%
-
-\n {++n_lines;}
-
+\n { ++linecount; printf("->Line no: %d\n",linecount);}
 %%
-
-int main(int argc[],char *argv[])
-{
- yyin=fopen("abc.txt", "r"); 
- yylex();
- printf("n# of lines: %d",n_lines);
- printf("\n"); 
- return 0;
-}
 
 int yywrap()
 {
-  return 1;
+	return 1;
+}
+int main(int argc[],char *argv[])
+{
+	printf("Enter the paragraph in myfile.txt to count number of lines in it\n");
+	yyin = fopen("myfile.txt","r");
+	yylex();
+	printf("\nTotal number of lines in this paragraph: %d",linecount);
+	return 0;
 }
