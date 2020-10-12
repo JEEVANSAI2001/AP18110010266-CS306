@@ -3,19 +3,15 @@ main: Identifier
 int: Keyword
 num1: Identifier
 num2: Identifier
-scanf: Identifier
 num1: Identifier
 num2: Identifier
 if: Identifier
 num1: Identifier
 >: Relational Operator
 num2: Identifier
-printf: Identifier
 num1: Identifier
 else: Keyword
-printf: Identifier
 num2: Identifier
-printf: Identifier
 for: Keyword
 int: Keyword
 i: Identifier
@@ -24,16 +20,13 @@ i: Identifier
 <: Relational Operator
 $s: Integer
 i: Identifier
-printf: Identifier
 i: Identifier
-printf: Identifier
 i: Identifier
 $s: Integer
 while: Identifier
 i: Identifier
 <: Relational Operator
 $s: Integer
-printf: Identifier
 i: Identifier
 return: Keyword
 $s: Integer
