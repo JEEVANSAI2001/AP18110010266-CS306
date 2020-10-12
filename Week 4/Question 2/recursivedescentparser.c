@@ -3,6 +3,7 @@ S->(L)|a
 L->SL'
 L'->,SL'|e
 */
+/* both the given inputs in the question are accepted by this recursive parser*/
 #include<stdio.h>
 #include<string.h>
 int S(),L(),Ldsh();
