@@ -1,0 +1,20 @@
+%{
+	int vowels=0;
+	int consonents=0;
+%}
+
+%%
+[aeiouAEiOU] { vowels++; }
+[a-zA-Z] { consonents++; }
+[\n] { return 0; }
+%%
+
+int yywrap(){ return 1;}
+
+int main()
+{
+	printf("Enter the String\nI will tell how many\nvowels and consonents\nare there\n");
+	yylex();
+	printf("\nVowels: %d , Consonents: %d",vowels,consonents);
+	return 0;
+}

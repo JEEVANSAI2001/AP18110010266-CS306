@@ -1,0 +1,43 @@
+%{
+	#include<stdio.h>
+	#include<string.h>
+	int i,n;
+	void tell(int);
+	char a[20];
+%}
+
+%%
+[aeiouAEIOU] {	int flag=1;	tell(flag);	return 0; }
+[a-zA-Z] {	int flag=0;	tell(flag);	return 0;}
+[\n] {return 0;}
+
+%%
+
+void tell(int flag)
+{
+	if(flag==1)
+	{
+		printf("Letter [%s] is a vowel\n",yytext);
+	}
+	else
+	{
+		printf("Letter [%s] is a consonent\n",yytext);
+	}
+}
+
+int yywrap()
+{
+	return 1;
+}
+
+int main()
+{
+	printf("Enter Length of string\n");
+	scanf("%d",&n);
+	printf("Please enter the string in single line\n");
+	for(i=0;i<=n;i++)
+	{
+		yylex();
+	}
+	return 0;
+}

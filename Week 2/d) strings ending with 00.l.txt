@@ -1,0 +1,20 @@
+%{
+	#include<stdio.h>
+%}
+
+%%
+[0-1]*00 { printf("String Accepted"); }
+[0-1]*   { printf("String Regected"); }
+[\n] { return 0; }
+.+ { printf("Invalid Input!\nPlease enter only\nbinary strings"); }
+%%
+
+int yywrap()
+{
+	return 1;
+}
+int main()
+{
+	yylex();
+	return 0;
+}
