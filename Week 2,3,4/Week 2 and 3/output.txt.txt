@@ -1,0 +1,32 @@
+int: Keyword
+main: Identifier
+int: Keyword
+num1: Identifier
+num2: Identifier
+num1: Identifier
+num2: Identifier
+if: Identifier
+num1: Identifier
+>: Relational Operator
+num2: Identifier
+num1: Identifier
+else: Keyword
+num2: Identifier
+for: Keyword
+int: Keyword
+i: Identifier
+$s: Integer
+i: Identifier
+<: Relational Operator
+$s: Integer
+i: Identifier
+i: Identifier
+i: Identifier
+$s: Integer
+while: Identifier
+i: Identifier
+<: Relational Operator
+$s: Integer
+i: Identifier
+return: Keyword
+$s: Integer
